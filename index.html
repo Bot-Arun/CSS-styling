@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/7ccf0810dc.js" crossorigin="anonymous"></script>
     <title>Bootstrap</title>
 </head>
+
 <body class="bg-light" style="height:100% !important;">
     <header class="display-4 container-fluid font-weight-normal text-primary text-center p-2"> Web site</header>
     <div class="hr-bar sticky-top">
@@ -25,7 +26,7 @@
             </ul>
         </nav>
         <nav class="navbar vrr col-md-3 col-9 h-md-100 position-absolute d-md-none mt-3 shadow bg-light"
-        style="margin-left:12.5%;border-bottom:3px solid grey;">
+            style="margin-left:12.5%;border-bottom:3px solid grey;">
             <ul class="navbar-nav col-10 my-3 h-100 mx-auto text-center"
                 style="font-size:1.2rem;background-color: inherit;">
                 <li class="nav-item">
@@ -55,40 +56,47 @@
                 </li>
             </ul>
         </nav>
-        <div class="content col-md-9 col-xl-10 text-secondary shadow mt-4 mx-3 mx-md-0  p-4" onclick="console.log('hello')"
+        <div class="content col-md-9 col-xl-10 text-secondary shadow mt-4 mx-3 mx-md-0  p-4"
             style="background-color: inherit;z-index:0;border-left: 3px solid grey;">
-            
-            
+
+
             <h1 class="text-dark">Hi this is my website</h1>
             <code>hellow world!</code>
             <br>
-            <mark> Lorem, ipsum dolor sit amet</mark>
+            <mark> Lorem, ipsum dolor sit amet</mark><br>
             <kbd>consectetur</kbd>
             <a href="#" class="text-success"> adipisicing elit</a>
+            <button class="btn btn-dark" onclick="whFind();">find</button>
             Eum facere excepturi recusandae ea illo nam autem iste tempora non a atque,
             voluptatum est doloribus quod laborum perferendis pariatur inventore vel illum obcaecati numquam nesciunt
             tempore. Voluptates illo nostrum eius harum quasi animi, deserunt sunt cumque praesentium, vero possimus
             eligendi eaque officiis dolor vitae mollitia natus expedita iure tenetur quos quas! Dignissimos sapiente,
-            <div class="row icons p-4 justify-content-around"> 
-                <div class="icon text-center shadow p-4 col-7 col-sm-4 col-md-3 col-xl-2 my-5" style="min-height:100px;">
+            <div class="row icons p-4 justify-content-around">
+                <div class="icon text-center shadow p-4 col-7 col-sm-4 col-md-3 col-xl-2 my-5"
+                    style="min-height:100px;">
                     <img src="google.png" alt="dsf" style="width:80%;margin-left:10%;margin-bottom: 20%;">
                     <h4 style="display:inline;border-top:2px solid grey" class="">Google</h4>
-                </div> 
-                <div class="icon shadow text-center p-2 col-7 col-sm-4 col-md-3 col-xl-2 my-5" style="margin:2px;min-height:100px;">
+                </div>
+                <div class="icon shadow text-center p-2 col-7 col-sm-4 col-md-3 col-xl-2 my-5"
+                    style="margin:2px;min-height:100px;">
                     <img src="windows10.png" alt="" style="width: 80%;margin-bottom:10%;">
                     <h4 style="display:inline;border-top:2px solid grey">Microsoft</h4>
-                </div> 
-                <div class="icon shadow text-center p-4 col-7 col-sm-4 col-md-3 col-xl-2 my-5 mb-sm-5 mt-md-5" style="min-height:100px;">
+                </div>
+                <div class="icon shadow text-center p-4 col-7 col-sm-4 col-md-3 col-xl-2 my-5 mb-sm-5 mt-md-5"
+                    style="min-height:100px;">
                     <img src="apple-logo (1).png" alt="dsf" style="width:80%;margin-left:10%;margin-bottom:15%;">
                     <h4 style="display:inline;border-top:2px solid grey">Apple</h4>
                 </div>
-        </div>
+            </div>
         </div>
         <ul class="pagination justify-content-center my-0 mx-auto w-100 p-4 " style="height:100px;">
             <li class="page-item "><a href="" class="page-link border-0 bg-dark shadow text-white rounded">1</a></li>
-            <li class="page-item"><a href="" class="page-link border-0 ml-1 shadow bg-dark text-white rounded">2</a></li>
-            <li class="page-item"><a href="" class="page-link border-0 ml-1 shadow bg-dark text-white rounded">3</a></li>
-            <li class="page-item"><a href="" class="page-link border-0 ml-1 shadow bg-dark text-white rounded">4</a></li>
+            <li class="page-item"><a href="" class="page-link border-0 ml-1 shadow bg-dark text-white rounded">2</a>
+            </li>
+            <li class="page-item"><a href="" class="page-link border-0 ml-1 shadow bg-dark text-white rounded">3</a>
+            </li>
+            <li class="page-item"><a href="" class="page-link border-0 ml-1 shadow bg-dark text-white rounded">4</a>
+            </li>
             <li class="page-item"><a href="" class="page-link border-0 ml-1 shadow bg-dark text-white rounded">5</a>
             </li>
         </ul>
@@ -98,13 +106,12 @@
         $("nav.vrr").hide();
         $(".menu").on("click", () => {
             $("nav.vrr").slideToggle(500);
-            console.log('hellow')
         })
-        $(window).scroll((e)=> {
-            console.log(window.scrollY );
-            $("img").css("top",window.scrollY*0.50 -700+'px');
-           
-        })
+        function whFind() {
+            $('code').html('inner Width : ' + window.innerWidth);
+            $('code').append('<br>inner Height : ' + window.innerHeight);
+        }
     </script>
 </body>
+
 </html>
